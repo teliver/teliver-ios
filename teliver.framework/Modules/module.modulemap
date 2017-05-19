@@ -1,0 +1,10 @@
+framework module teliver {
+  umbrella header "teliver.h"
+
+  export *
+  module * { export * }
+}
+
+module teliver.Swift {
+    header "teliver-Swift.h"
+}
