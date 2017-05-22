@@ -1,4 +1,4 @@
-# [Teliver](http://www.teliver.io)
+# [Teliver](http://teliver.io)
 
 [![Pod Version](https://img.shields.io/badge/pod-v1.0.0-yellowgreen.svg)](http://cocoadocs.org/docsets/Smooch/)
 [![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](http://cocoadocs.org/docsets/Smooch/)
