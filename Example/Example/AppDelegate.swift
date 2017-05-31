@@ -95,9 +95,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // Convert token to string
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
-        print(deviceTokenString)
-        //Teliver.identifyUser(forUser: "ram", withToken: deviceTokenString)
-        Teliver.identifyUser(forUser: "raass")
+        
+        //If user need to be identified for push also, then use this.
+        Teliver.identifyUser(forUser: "test_customer", withToken: deviceTokenString)
+        
+        //If user need to be identified then use this.
+        //Teliver.identifyUser(forUser: "test_customer")
+        
        }
     
     

@@ -156,6 +156,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @discussion Register the the user with teliver to be identified.
 /// @param username The username of a user to map the push notification token.
 + (void)identifyUserForUser:(NSString * _Nonnull)username;
+/// @abstract UnIdentify User for Teliver.
+/// @discussion Unidentify the registered user from Teliver.
+/// @param username The username of a user to map with teliver.
++ (void)unIdentifyUserForUser:(NSString * _Nonnull)username;
 + (BOOL)isTeliverPushWithData:(NSDictionary * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
 /// @abstract Identify User for Teliver Push Notification with the username.
 /// @discussion Register the push notification token to recieve Push Notification from Teliver Server.
