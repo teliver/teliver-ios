@@ -12,7 +12,7 @@ Live locality shares are now taken a step forward with Teliver. Real time activi
 - Multi Business Solutions: Real-Time solutions for business requiring it is delivered with precision.
 - Advanced Customization: With micro managerial possibilities, the opportunity to customize is practically infinite.
 
-Create your teliver account today : [http://stagingapp.teliver.io](http://stagingapp.teliver.io).
+Create your teliver account today : [https://app.teliver.io](https://app.teliver.io).
 
 CocoaPods:
 
