@@ -11,7 +11,6 @@ import teliver
 
 class MyMapViewController: UIViewController,TeliverTrackingDelegate{
     
-
     var users: [TeliverTracker]? = []
     
     override func viewDidLoad() {
@@ -24,10 +23,6 @@ class MyMapViewController: UIViewController,TeliverTrackingDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func didStartedTracking(_ trackingId: String?) {
-        print("Started Tracking for \(String(describing: trackingId))")
-    }
     func didStoppedTracking(_ trackingId: String?) {
         print("Stopped Tracking for \(String(describing: trackingId))")
     }
@@ -37,6 +32,10 @@ class MyMapViewController: UIViewController,TeliverTrackingDelegate{
     func didRecieveErrorOnTracking(_ error: String?) {
         print("Error Tracking for \(String(describing: error))")
     }
+    func didStartedTracking(_ trackingId: String?, location: [String : Any]) {
+        print("Started Tracking for \(String(describing: trackingId))")
+    }
+
 
     /*
     // MARK: - Navigation

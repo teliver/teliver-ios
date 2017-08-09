@@ -140,8 +140,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class TeliverSettings;
-@class TeliverTracker;
 @class UIViewController;
+@class TeliverTracker;
 
 /// Teliver: This class is the interface for the SDK exposed methods.
 SWIFT_CLASS("_TtC7teliver7Teliver")
@@ -152,6 +152,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).
 /// @param settings The settings to use. Refer @TeliverSettings for more information.
 - (nonnull instancetype)initWithTeliverSettings:(TeliverSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+/// @abstract Register Teliver Delegates for SDK Callbacks.
+/// @discussion Register Teliver Delegates for SDK Callbacks for a view controller.
+/// @param controller UIViewController where delegates have been registered.
++ (void)registerTeliverCallbacksForViewController:(UIViewController * _Nonnull)controller;
 /// @abstract Identify User for Teliver.
 /// @discussion Register the the user with teliver to be identified.
 /// @param username The username of a user to map the push notification token.
@@ -160,6 +164,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @discussion Unidentify the registered user from Teliver.
 /// @param username The username of a user to map with teliver.
 + (void)unIdentifyUserForUser:(NSString * _Nonnull)username;
+/// @abstract Indentify Push is from Teliver.
+/// @discussion Check the Push received is from Teliver.
+/// @param data The data received from APNS Server.
 + (BOOL)isTeliverPushWithData:(NSDictionary * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
 /// @abstract Identify User for Teliver Push Notification with the username.
 /// @discussion Register the push notification token to recieve Push Notification from Teliver Server.
@@ -211,6 +218,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 
 
 @interface Teliver (SWIFT_EXTENSION(teliver))
+@end
+
+
+SWIFT_PROTOCOL("_TtP7teliver15TeliverDelegate_")
+@protocol TeliverDelegate
+- (void)didInitializedSDK:(BOOL)initialized message:(NSString * _Nullable)message;
+- (void)didUserRegistered:(BOOL)registered message:(NSString * _Nullable)message;
 @end
 
 
@@ -266,7 +280,7 @@ SWIFT_CLASS("_TtC7teliver14TeliverTracker")
 
 SWIFT_PROTOCOL("_TtP7teliver23TeliverTrackingDelegate_")
 @protocol TeliverTrackingDelegate
-- (void)didStartedTracking:(NSString * _Nullable)trackingId;
+- (void)didStartedTracking:(NSString * _Nullable)trackingId location:(NSDictionary<NSString *, id> * _Nonnull)location;
 - (void)didStoppedTracking:(NSString * _Nullable)trackingId;
 - (void)didRecieveUpdateOnTracking:(NSString * _Nullable)trackingId data:(NSDictionary<NSString *, id> * _Nonnull)data;
 - (void)didRecieveErrorOnTracking:(NSString * _Nullable)error;

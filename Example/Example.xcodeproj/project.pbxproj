@@ -19,9 +19,9 @@
 		216B896A1E4AF9D200A3880D /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B89691E4AF9D200A3880D /* ExampleTests.swift */; };
 		216B89751E4AF9D200A3880D /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216B89741E4AF9D200A3880D /* ExampleUITests.swift */; };
 		219322361E8D07AB00DBEE17 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219322351E8D07AB00DBEE17 /* PushViewController.swift */; };
+		21C8903C1F3B474F006884EA /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C8903B1F3B474F006884EA /* teliver.framework */; };
+		21C8903D1F3B474F006884EA /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21C8903B1F3B474F006884EA /* teliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		21CECBD51EC1B105009D753F /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CECBD41EC1B105009D753F /* MyMapViewController.swift */; };
-		21FBE7681EDF44800028F141 /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FBE7671EDF44800028F141 /* teliver.framework */; };
-		21FBE7691EDF44800028F141 /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21FBE7671EDF44800028F141 /* teliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				21FBE7691EDF44800028F141 /* teliver.framework in Embed Frameworks */,
+				21C8903D1F3B474F006884EA /* teliver.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,8 +75,8 @@
 		216B89741E4AF9D200A3880D /* ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleUITests.swift; sourceTree = "<group>"; };
 		216B89761E4AF9D200A3880D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		219322351E8D07AB00DBEE17 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
+		21C8903B1F3B474F006884EA /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = teliver.framework; sourceTree = "<group>"; };
 		21CECBD41EC1B105009D753F /* MyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
-		21FBE7671EDF44800028F141 /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = teliver.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21FBE7681EDF44800028F141 /* teliver.framework in Frameworks */,
+				21C8903C1F3B474F006884EA /* teliver.framework in Frameworks */,
 				210F56651E82B618006A2A17 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,7 +124,7 @@
 		216B89451E4AF9D200A3880D = {
 			isa = PBXGroup;
 			children = (
-				21FBE7671EDF44800028F141 /* teliver.framework */,
+				21C8903B1F3B474F006884EA /* teliver.framework */,
 				216B89501E4AF9D200A3880D /* Example */,
 				216B89681E4AF9D200A3880D /* ExampleTests */,
 				216B89731E4AF9D200A3880D /* ExampleUITests */,

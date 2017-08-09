@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func registerForTeliver(){
         
-                let settings=TeliverSettings.init(withAppKey: "316324280831ccb560dc546b0fc38673")
+                let settings=TeliverSettings.init(withAppKey: "TELIVER_APP_KEY")
                 settings.debugging=true
                 Teliver.init(withTeliverSettings: settings)
     }

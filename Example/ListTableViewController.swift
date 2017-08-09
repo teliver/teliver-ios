@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import teliver
 
-class ListTableViewController: UITableViewController {
+class ListTableViewController: UITableViewController,TeliverDelegate {
 
     var arrayOfTeliverSDK:[DemoObject] = {
        var arr = [DemoObject]()
@@ -22,6 +23,7 @@ class ListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Teliver.registerTeliverCallbacks(forViewController: self)
         populateDemoDataForTeliverSDK()
     }
 
@@ -180,6 +182,14 @@ extension ListTableViewController{
         
     }
     
+    
+    public func didInitializedSDK(_ initialized: Bool, message: String?){
+        print(message)
+    }
+    
+    public func didUserRegistered(_ registered: Bool, message: String?){
+        print(message)
+    }
     
     func populateDemoDataForTeliverSDK(){
         let obj1: DemoObject = {
