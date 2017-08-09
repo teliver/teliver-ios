@@ -1,8 +1,8 @@
-# [Teliver](http://teliver.io)
+# [Teliver](https://teliver.io)
 
-[![Pod Version](https://img.shields.io/badge/pod-v1.0.0-yellowgreen.svg)](http://cocoadocs.org/docsets/Smooch/)
-[![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](http://cocoadocs.org/docsets/Smooch/)
-[![License](https://img.shields.io/badge/License-commercial-orange.svg)](http://smooch.io/terms.html)
+[![Pod Version](https://img.shields.io/badge/pod-v1.0.0-yellowgreen.svg)](http://cocoadocs.org/docsets/teliver/)
+[![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](http://cocoadocs.org/docsets/teliver/)
+[![License](https://img.shields.io/badge/License-commercial-orange.svg)](https://teliver.io/terms/)
 
 Teliver is your one place stop for all GPS Based Location tracking solutions. With simplified integrations for iOS and Android, Teliver synchronizes with applications that require location tracking. Advanced options with the inclusion of Custom markers, Multiple Operator Tracking and Push notifications to enhance user satisfaction and business productivity are accomplished.
 
@@ -13,6 +13,8 @@ Live locality shares are now taken a step forward with Teliver. Real time activi
 - Advanced Customization: With micro managerial possibilities, the opportunity to customize is practically infinite.
 
 Create your teliver account today : [https://app.teliver.io](https://app.teliver.io).
+
+For more details : [https://teliver.io](https://teliver.io).
 
 CocoaPods:
 
@@ -32,7 +34,7 @@ in didFinishLaunchingWithOptions method,
 
 ```Swift 
 
-let settings = TeliverSettings.init(withAppKey: "YOURAPPTOKEN")
+let settings = TeliverSettings.init(withAppKey: "TELIVER_APP_KEY")
 Teliver.init(withTeliverSettings: settings)
 
 ```
@@ -53,10 +55,10 @@ in didFinishLaunchingWithOptions method,
 
 ```objc
 
-TeliverSettings* settings = [[TeliverSettings alloc]initWithAppKey:@"YOURAPPTOKEN"];
+TeliverSettings* settings = [[TeliverSettings alloc]initWithAppKey:@"TELIVER_APP_KEY"];
 [[Teliver alloc]initWithTeliverSettings:settings];
 
 ```
 
 
-Our [Docs and full install guide](http://docs.teliver.io).
+Our [Docs and full install guide](https://docs.teliver.io).
