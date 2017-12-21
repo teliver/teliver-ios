@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2172B0911FEBA4E8000490F4 /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2172B0901FEBA4E8000490F4 /* teliver.framework */; };
+		2172B0921FEBA4E8000490F4 /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2172B0901FEBA4E8000490F4 /* teliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C5F84CABB328DD54039184 /* Pods_teliverdemo.framework */; };
+		AF61EFC81FE277B7007D43EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC71FE277B7007D43EF /* AppDelegate.swift */; };
+		AF61EFCA1FE277B7007D43EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC91FE277B7007D43EF /* ViewController.swift */; };
+		AF61EFCF1FE277B7007D43EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF61EFCE1FE277B7007D43EF /* Assets.xcassets */; };
+		AF61EFD21FE277B7007D43EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF61EFD01FE277B7007D43EF /* LaunchScreen.storyboard */; };
+		AF61EFEA1FE28BC2007D43EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF61EFE91FE28BC2007D43EF /* Main.storyboard */; };
+		AF61EFED1FE28C21007D43EF /* TELConsumerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFEB1FE28C21007D43EF /* TELConsumerViewController.swift */; };
+		AF61EFEE1FE28C21007D43EF /* TELConsumerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF61EFEC1FE28C21007D43EF /* TELConsumerViewController.xib */; };
+		AF61EFF11FE28DEB007D43EF /* TELDriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFEF1FE28DEB007D43EF /* TELDriverViewController.swift */; };
+		AF61EFF21FE28DEB007D43EF /* TELDriverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF61EFF01FE28DEB007D43EF /* TELDriverViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF61EFDC1FE278AB007D43EF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2172B0921FEBA4E8000490F4 /* teliver.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2172B0901FEBA4E8000490F4 /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = teliver.framework; sourceTree = "<group>"; };
+		38554EDBF742BE448C12E2BA /* Pods-teliverdemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.release.xcconfig"; sourceTree = "<group>"; };
+		AAD1E57A2CF74CA04259FD97 /* Pods-teliverdemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF61EFC41FE277B7007D43EF /* teliverdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teliverdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF61EFC71FE277B7007D43EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF61EFC91FE277B7007D43EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF61EFCE1FE277B7007D43EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF61EFD11FE277B7007D43EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF61EFD31FE277B7007D43EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF61EFE91FE28BC2007D43EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AF61EFEB1FE28C21007D43EF /* TELConsumerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TELConsumerViewController.swift; sourceTree = "<group>"; };
+		AF61EFEC1FE28C21007D43EF /* TELConsumerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TELConsumerViewController.xib; sourceTree = "<group>"; };
+		AF61EFEF1FE28DEB007D43EF /* TELDriverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TELDriverViewController.swift; sourceTree = "<group>"; };
+		AF61EFF01FE28DEB007D43EF /* TELDriverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TELDriverViewController.xib; sourceTree = "<group>"; };
+		B1C5F84CABB328DD54039184 /* Pods_teliverdemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teliverdemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF61EFC11FE277B7007D43EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2172B0911FEBA4E8000490F4 /* teliver.framework in Frameworks */,
+				ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A87B11F45551BD2DBF9ADD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAD1E57A2CF74CA04259FD97 /* Pods-teliverdemo.debug.xcconfig */,
+				38554EDBF742BE448C12E2BA /* Pods-teliverdemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF61EFBB1FE277B7007D43EF = {
+			isa = PBXGroup;
+			children = (
+				2172B0901FEBA4E8000490F4 /* teliver.framework */,
+				AF61EFC61FE277B7007D43EF /* teliverdemo */,
+				AF61EFC51FE277B7007D43EF /* Products */,
+				2A87B11F45551BD2DBF9ADD1 /* Pods */,
+				D6ED26A66DECE349EF6F7569 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF61EFC51FE277B7007D43EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF61EFC41FE277B7007D43EF /* teliverdemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF61EFC61FE277B7007D43EF /* teliverdemo */ = {
+			isa = PBXGroup;
+			children = (
+				AF61EFE91FE28BC2007D43EF /* Main.storyboard */,
+				AF61EFC71FE277B7007D43EF /* AppDelegate.swift */,
+				AF61EFC91FE277B7007D43EF /* ViewController.swift */,
+				AF61EFCE1FE277B7007D43EF /* Assets.xcassets */,
+				AF61EFD01FE277B7007D43EF /* LaunchScreen.storyboard */,
+				AF61EFD31FE277B7007D43EF /* Info.plist */,
+				AF61EFEB1FE28C21007D43EF /* TELConsumerViewController.swift */,
+				AF61EFEC1FE28C21007D43EF /* TELConsumerViewController.xib */,
+				AF61EFEF1FE28DEB007D43EF /* TELDriverViewController.swift */,
+				AF61EFF01FE28DEB007D43EF /* TELDriverViewController.xib */,
+			);
+			path = teliverdemo;
+			sourceTree = "<group>";
+		};
+		D6ED26A66DECE349EF6F7569 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C5F84CABB328DD54039184 /* Pods_teliverdemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF61EFC31FE277B7007D43EF /* teliverdemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF61EFD61FE277B7007D43EF /* Build configuration list for PBXNativeTarget "teliverdemo" */;
+			buildPhases = (
+				A3E7E247D86B99C7FED7A599 /* [CP] Check Pods Manifest.lock */,
+				AF61EFC01FE277B7007D43EF /* Sources */,
+				AF61EFC11FE277B7007D43EF /* Frameworks */,
+				AF61EFC21FE277B7007D43EF /* Resources */,
+				AF61EFDC1FE278AB007D43EF /* Embed Frameworks */,
+				35FC497A09C41E755ED18EC5 /* [CP] Embed Pods Frameworks */,
+				F7AC2D2D00A6E82A8F6EBF16 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = teliverdemo;
+			productName = teliverdemo;
+			productReference = AF61EFC41FE277B7007D43EF /* teliverdemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF61EFBC1FE277B7007D43EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = QuadKast;
+				TargetAttributes = {
+					AF61EFC31FE277B7007D43EF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = AF61EFBF1FE277B7007D43EF /* Build configuration list for PBXProject "teliverdemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF61EFBB1FE277B7007D43EF;
+			productRefGroup = AF61EFC51FE277B7007D43EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF61EFC31FE277B7007D43EF /* teliverdemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF61EFC21FE277B7007D43EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF61EFEA1FE28BC2007D43EF /* Main.storyboard in Resources */,
+				AF61EFF21FE28DEB007D43EF /* TELDriverViewController.xib in Resources */,
+				AF61EFD21FE277B7007D43EF /* LaunchScreen.storyboard in Resources */,
+				AF61EFEE1FE28C21007D43EF /* TELConsumerViewController.xib in Resources */,
+				AF61EFCF1FE277B7007D43EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35FC497A09C41E755ED18EC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3E7E247D86B99C7FED7A599 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teliverdemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7AC2D2D00A6E82A8F6EBF16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF61EFC01FE277B7007D43EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF61EFF11FE28DEB007D43EF /* TELDriverViewController.swift in Sources */,
+				AF61EFCA1FE277B7007D43EF /* ViewController.swift in Sources */,
+				AF61EFC81FE277B7007D43EF /* AppDelegate.swift in Sources */,
+				AF61EFED1FE28C21007D43EF /* TELConsumerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF61EFD01FE277B7007D43EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF61EFD11FE277B7007D43EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF61EFD41FE277B7007D43EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF61EFD51FE277B7007D43EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF61EFD71FE277B7007D43EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAD1E57A2CF74CA04259FD97 /* Pods-teliverdemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MY6B33W8UL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = teliverdemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF61EFD81FE277B7007D43EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38554EDBF742BE448C12E2BA /* Pods-teliverdemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MY6B33W8UL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = teliverdemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF61EFBF1FE277B7007D43EF /* Build configuration list for PBXProject "teliverdemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF61EFD41FE277B7007D43EF /* Debug */,
+				AF61EFD51FE277B7007D43EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF61EFD61FE277B7007D43EF /* Build configuration list for PBXNativeTarget "teliverdemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF61EFD71FE277B7007D43EF /* Debug */,
+				AF61EFD81FE277B7007D43EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF61EFBC1FE277B7007D43EF /* Project object */;
+}

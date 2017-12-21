@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="teliverdemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcp-vT-3Nd">
+                                <rect key="frame" x="1" y="513" width="188" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="7iO-73-gQs"/>
+                                    <constraint firstAttribute="width" constant="188" id="Oks-Oz-K44"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Consumer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="ConsumerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sM-2y-coW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-xS-BET">
+                                <rect key="frame" x="186" y="513" width="188" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="i5W-S9-Lr9"/>
+                                    <constraint firstAttribute="height" constant="49" id="m20-iD-uJo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Driver">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="OperatorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZy-N3-r3d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vV-PV-vCQ">
+                                <rect key="frame" x="137" y="453" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0fE-Gi-dFd"/>
+                                    <constraint firstAttribute="width" constant="100" id="SG0-an-XQM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a Product of QuadKast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="188-qk-dTM">
+                                <rect key="frame" x="33" y="176" width="308" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Teliver_ic" translatesAutoresizingMaskIntoConstraints="NO" id="JET-6g-uaX">
+                                <rect key="frame" x="87" y="68" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="19f-8T-Slz"/>
+                                    <constraint firstAttribute="width" constant="200" id="X8g-wU-huM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30980392156862746" green="0.72549019607843135" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UxO-xS-BET" secondAttribute="trailing" constant="1" id="4mW-Sx-bkn"/>
+                            <constraint firstItem="JET-6g-uaX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4nY-u0-7ZM"/>
+                            <constraint firstItem="JET-6g-uaX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C5H-PQ-ysd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UxO-xS-BET" secondAttribute="bottom" constant="105" id="HNQ-8d-Y3e"/>
+                            <constraint firstItem="JET-6g-uaX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Id9-SN-ROz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="188-qk-dTM" secondAttribute="trailing" constant="34" id="Lie-sb-Vch"/>
+                            <constraint firstItem="188-qk-dTM" firstAttribute="top" secondItem="JET-6g-uaX" secondAttribute="bottom" constant="8" id="TuJ-O6-FgP"/>
+                            <constraint firstItem="3vV-PV-vCQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f7Q-Mq-mrU"/>
+                            <constraint firstItem="Vcp-vT-3Nd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="1" id="gSf-s0-OJi"/>
+                            <constraint firstItem="188-qk-dTM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="jxn-Hy-TZ5"/>
+                            <constraint firstItem="Vcp-vT-3Nd" firstAttribute="top" secondItem="3vV-PV-vCQ" secondAttribute="bottom" constant="30" id="sZe-eW-AP6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vcp-vT-3Nd" secondAttribute="bottom" constant="105" id="uiQ-2K-dyo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UI3-jq-g4a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="100.29985007496252"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Teliver_ic" width="200" height="100"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
