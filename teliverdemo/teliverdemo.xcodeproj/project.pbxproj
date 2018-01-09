@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2172B0911FEBA4E8000490F4 /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2172B0901FEBA4E8000490F4 /* teliver.framework */; };
-		2172B0921FEBA4E8000490F4 /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2172B0901FEBA4E8000490F4 /* teliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		219E64E820049FF1005F556E /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219E64E720049FF0005F556E /* teliver.framework */; };
+		219E64E920049FF1005F556E /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 219E64E720049FF0005F556E /* teliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C5F84CABB328DD54039184 /* Pods_teliverdemo.framework */; };
 		AF61EFC81FE277B7007D43EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC71FE277B7007D43EF /* AppDelegate.swift */; };
 		AF61EFCA1FE277B7007D43EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC91FE277B7007D43EF /* ViewController.swift */; };
@@ -28,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2172B0921FEBA4E8000490F4 /* teliver.framework in Embed Frameworks */,
+				219E64E920049FF1005F556E /* teliver.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2172B0901FEBA4E8000490F4 /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = teliver.framework; sourceTree = "<group>"; };
+		219E64E720049FF0005F556E /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = teliver.framework; path = ../teliver.framework; sourceTree = "<group>"; };
 		38554EDBF742BE448C12E2BA /* Pods-teliverdemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.release.xcconfig"; sourceTree = "<group>"; };
 		AAD1E57A2CF74CA04259FD97 /* Pods-teliverdemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF61EFC41FE277B7007D43EF /* teliverdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teliverdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2172B0911FEBA4E8000490F4 /* teliver.framework in Frameworks */,
+				219E64E820049FF1005F556E /* teliver.framework in Frameworks */,
 				ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,7 @@
 		AF61EFBB1FE277B7007D43EF = {
 			isa = PBXGroup;
 			children = (
-				2172B0901FEBA4E8000490F4 /* teliver.framework */,
+				219E64E720049FF0005F556E /* teliver.framework */,
 				AF61EFC61FE277B7007D43EF /* teliverdemo */,
 				AF61EFC51FE277B7007D43EF /* Products */,
 				2A87B11F45551BD2DBF9ADD1 /* Pods */,

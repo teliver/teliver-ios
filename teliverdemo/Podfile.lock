@@ -1,0 +1,15 @@
+PODS:
+  - IQKeyboardManagerSwift (5.0.7)
+  - Toast-Swift (3.0.1)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - Toast-Swift (~> 3.0.1)
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 30fb3a61de1af53a95e02b80fb54ed0a19d5ede5
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+
+PODFILE CHECKSUM: d1721b1af5d71e45e1c152e4f347ef63e4940baf
+
+COCOAPODS: 1.2.0

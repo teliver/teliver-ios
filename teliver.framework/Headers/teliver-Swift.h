@@ -201,7 +201,6 @@ SWIFT_CLASS("_TtC7teliver7QKTrips")
 @class TeliverSettings;
 @class UIViewController;
 enum TeliverUserTypes : NSInteger;
-@class TeliverTrackerBuilder;
 
 /// Teliver: This class is the interface for the SDK exposed methods.
 SWIFT_CLASS("_TtC7teliver7Teliver")
@@ -239,6 +238,39 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @param token    The push notification token.
 /// @param type     The User Type of the User.(Driver or Consumer)
 + (void)identifyUserForUser:(NSString * _Nonnull)username withToken:(NSString * _Nonnull)token withType:(enum TeliverUserTypes)type;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+@class TeliverNotificationBuilder;
+
+@interface Teliver (SWIFT_EXTENSION(teliver))
++ (NSDictionary<NSString *, QKTrips *> * _Nonnull)getCurrentTrips SWIFT_WARN_UNUSED_RESULT;
++ (void)sendEventWithTrackingID:(NSString * _Nonnull)trackingId andNotificationBuilder:(TeliverNotificationBuilder * _Nonnull)build;
+@end
+
+
+@interface Teliver (SWIFT_EXTENSION(teliver))
+/// @abstract Register Trip Delegates.
+/// @discussion register delegate for Trip callbacks.
+/// @param delegate The ViewController.
++ (void)registerTripDelegateOnViewController:(UIViewController * _Nullable)controller;
+/// @abstract Request for Location permission.
++ (void)requestLocationPermission;
+/// @abstract Start Trip for an operator using TrackingID.
+/// @discussion This method helps to start trip from an operator with help of tracking id provided the your service at order(It can be your Order ID).
+/// @param trackingId   A tracking id  of a operator.
++ (void)startTripWithTrackingId:(NSString * _Nullable)trackingId;
+/// @abstract Stop Trip for an operator using TrackingID.
+/// @discussion This method helps to stop trip from an operator with help of tracking id provided at the time of starting the trip.
+/// @param trackingId   A tracking id  of a operator.
++ (void)stopTripWithTrackingID:(NSString * _Nonnull)trackingId;
+@end
+
+
+
+@class TeliverTrackerBuilder;
+
+@interface Teliver (SWIFT_EXTENSION(teliver))
 /// @abstract Start tracking the Driver using the tracking Id provided by the Driver.
 /// @discussion This method helps to track the Driver with help of tracking id provided the Driver at start of his trip. Use can use Teliver Push Service from Driver SDK to recieve tracking id through Push Notification.
 /// @param user     A Single Teliver Tracker object of a user to be tracked. Refer @TeliverTracker for more information.
@@ -279,35 +311,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
 /// @param trackingId     A tracking id  of a Driver.
 + (void)stopBackgroundTrackingForTrackingId:(NSString * _Nonnull)trackingId;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
-
-
-@class TeliverTripBuilder;
-@class TeliverNotificationBuilder;
-
-@interface Teliver (SWIFT_EXTENSION(teliver))
-/// @abstract Register Trip Delegates.
-/// @discussion register delegate for Trip callbacks.
-/// @param delegate The ViewController.
-+ (void)registerTripDelegateOnViewController:(UIViewController * _Nullable)controller;
-/// @abstract Request for Location permission.
-+ (void)requestLocationPermission;
-/// @abstract Start Trip for an operator using TrackingID.
-/// @discussion This method helps to start trip from an operator with help of tracking id provided the your service at order(It can be your Order ID).
-/// @param trackingId   A tracking id  of a operator.
-+ (void)startTripWithTrackingId:(NSString * _Nullable)trackingId;
-/// @abstract Start Trip for an operator using TrackingID .
-/// @discussion This method helps to start trip from an operator with help of tracking id provided the Your service at order(It can be yur Order ID).
-/// @param trackingId     A tracking id  of a operator.
-+ (void)startTripWithTripbuilder:(TeliverTripBuilder * _Nullable)trip;
-+ (void)stopTripWithTrackingID:(NSString * _Nonnull)trackingID;
-+ (void)tagLocationWithTrackingID:(NSString * _Nonnull)trackingID andTagMessage:(NSString * _Nonnull)andTagMessage;
-+ (NSDictionary<NSString *, QKTrips *> * _Nonnull)getCurrentTrips SWIFT_WARN_UNUSED_RESULT;
-+ (void)sendEventWithTrackingID:(NSString * _Nonnull)trackingID forUsers:(TeliverNotificationBuilder * _Nonnull)forUsers;
-+ (void)sendEventWithTrackingID:(NSString * _Nonnull)trackingID withTagMessage:(NSString * _Nonnull)withTagMessage forUsers:(TeliverNotificationBuilder * _Nonnull)forUsers;
-@end
+typedef SWIFT_ENUM(NSInteger, TeliverCommandTypes) {
+  TeliverCommandTypesEvent = 1,
+  TeliverCommandTypesStartTrip = 2,
+};
 
 
 SWIFT_PROTOCOL("_TtP7teliver15TeliverDelegate_")
@@ -321,15 +330,12 @@ SWIFT_PROTOCOL("_TtP7teliver15TeliverDelegate_")
 SWIFT_CLASS("_TtC7teliver26TeliverNotificationBuilder")
 @interface TeliverNotificationBuilder : NSObject
 /// Array of Users to be Notified. To notify for single user, Send as [“Ram”].
-@property (nonatomic, copy) NSArray<NSString *> * _Nullable users;
-/// Title for the event Notification. This title will be shown on the push notification.
+@property (nonatomic, copy) NSArray<NSString *> * _Nonnull users;
+/// title for the event Notification. This title will be shown on the push notification.
 @property (nonatomic, copy) NSString * _Nonnull title;
+@property (nonatomic) enum TeliverCommandTypes command;
 /// Payload for the Event.This will be sent as a custom payload along with the Push Notification.
 @property (nonatomic, copy) NSString * _Nonnull payload;
-/// @abstract Teliver Notification Initializer.
-/// @param title Title for the notification.
-/// @param users Array of users.
-- (nonnull instancetype)initWithTitle:(NSString * _Nonnull)title forUsers:(NSArray<NSString *> * _Nonnull)users OBJC_DESIGNATED_INITIALIZER;
 /// @abstract Teliver Settings Initializer.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -400,8 +406,6 @@ SWIFT_CLASS("_TtC7teliver18TeliverTripBuilder")
 @interface TeliverTripBuilder : NSObject
 /// Tracking Id.
 @property (nonatomic, copy) NSString * _Nullable trackingId;
-/// Notification Object.
-@property (nonatomic, strong) TeliverNotificationBuilder * _Nullable Notify;
 /// @abstract Teliver Trip Builder Initializer.
 /// @param id Tracking ID.
 /// @param distance Distance filter.

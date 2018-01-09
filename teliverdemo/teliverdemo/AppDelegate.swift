@@ -24,16 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         
         //Configure Teliver SDK
-        let settings = TeliverSettings.init(withAppKey: "2463ba309dad474432232f34c3ed6d3c")
+        let settings = TeliverSettings.init(withAppKey: "TELIVER_KEY")
         settings.debugging = true //Enable Debugging.
-        
         Teliver.init(withTeliverSettings: settings) //Initialize SDK.
-        
         return true
     }
+  
     
     
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
