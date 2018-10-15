@@ -21,6 +21,7 @@ CocoaPods:
 
 For Swift 4 and below, use teliver v1.1.3
     
+    pod 'teliver', '1.1.3'
 
 Swift:
 
