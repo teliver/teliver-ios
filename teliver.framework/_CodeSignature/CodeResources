@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/teliver-Swift.h</key>
 		<data>
-		8SSEbY/+YjOgBfVPDVFBlkSY2Gg=
+		BHk24BGolyQgqc3EAk2HLxm591A=
 		</data>
 		<key>Headers/teliver.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		J64jaqefxIHajXPaG6Lw55TOA5Y=
+		qXA2j1n0BKZNBNq9Il0qq8qQfVw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -26,19 +26,27 @@
 		</data>
 		<key>Modules/teliver.swiftmodule/arm.swiftdoc</key>
 		<data>
-		uPyORhaUeLLsQRjB7zvVb7N4198=
+		H39ukP3IyR0kMPOoWrjIBGf0oJQ=
 		</data>
 		<key>Modules/teliver.swiftmodule/arm.swiftmodule</key>
 		<data>
-		xgADmMJkjY8RZO0avkhVhV/UUZk=
+		ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
 		</data>
 		<key>Modules/teliver.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		YDCeSy4Us+hoT6/yJA/8zoJKQHE=
+		OQCsj/8t4z28sWmId/GEzqOTSh8=
 		</data>
 		<key>Modules/teliver.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		425EGoG7nEY9TUtBgxARbyiymkM=
+		hs5C2bddDB1mg9XwtfWqAC2beJ8=
+		</data>
+		<key>Modules/teliver.swiftmodule/armv7.swiftdoc</key>
+		<data>
+		H39ukP3IyR0kMPOoWrjIBGf0oJQ=
+		</data>
+		<key>Modules/teliver.swiftmodule/armv7.swiftmodule</key>
+		<data>
+		ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
 		</data>
 		<key>cancel@3x.png</key>
 		<data>
@@ -94,11 +102,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8SSEbY/+YjOgBfVPDVFBlkSY2Gg=
+			BHk24BGolyQgqc3EAk2HLxm591A=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Jn12tUXlhgivQ4aTtIuvvXBFCdVhGKvLQMPgJsSwq4=
+			lWox6Z0gyqJy0forCOmtzJl4jYfVgGT7z5PDf8GdzDk=
 			</data>
 		</dict>
 		<key>Headers/teliver.h</key>
@@ -127,44 +135,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uPyORhaUeLLsQRjB7zvVb7N4198=
+			H39ukP3IyR0kMPOoWrjIBGf0oJQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			38ic0A36MrTXSNy4440mGshRPts0rdE7PnoXojqHFVU=
+			v641pyk3IoGO9Bxp2ECXUIBAVxlkHNpdzdutEq+RS+c=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xgADmMJkjY8RZO0avkhVhV/UUZk=
+			ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			djSv37N4L7VRgnuN7a3Uz2UeIC/JsllbNrdORh2cUkw=
+			YZrW+cgkNhtFzYGhMAxPheRT6VUIrh+uDuoUCHk0FnA=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YDCeSy4Us+hoT6/yJA/8zoJKQHE=
+			OQCsj/8t4z28sWmId/GEzqOTSh8=
 			</data>
 			<key>hash2</key>
 			<data>
-			OEtOcPtjux/WJl7iNjLBPJDTdYHDwNseWYWWJ7k/YBU=
+			N4wKpnx1oKnDxVZ9EenwqEPEIuMQ/bUY2B2XvktPyt8=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			425EGoG7nEY9TUtBgxARbyiymkM=
+			hs5C2bddDB1mg9XwtfWqAC2beJ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			jTcQynPCjvGnRX1D2y5dkvQaDtsylO8cYD/awOozjbk=
+			Zi6X21XUAQfl0/yEkchjnGl72Zju1L25GMjll7fn4dQ=
+			</data>
+		</dict>
+		<key>Modules/teliver.swiftmodule/armv7.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H39ukP3IyR0kMPOoWrjIBGf0oJQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			v641pyk3IoGO9Bxp2ECXUIBAVxlkHNpdzdutEq+RS+c=
+			</data>
+		</dict>
+		<key>Modules/teliver.swiftmodule/armv7.swiftmodule</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
+			</data>
+			<key>hash2</key>
+			<data>
+			YZrW+cgkNhtFzYGhMAxPheRT6VUIrh+uDuoUCHk0FnA=
 			</data>
 		</dict>
 		<key>cancel@3x.png</key>
@@ -269,7 +299,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -300,24 +330,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -353,13 +371,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
