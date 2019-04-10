@@ -195,10 +195,91 @@ SWIFT_CLASS("_TtC7teliver21CustomPointAnnotation")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class TeliverSettings;
+@class UIViewController;
+@class TeliverTracker;
+@class MKMapView;
 
 /// Teliver: This class is the interface for the SDK exposed methods.
 SWIFT_CLASS("_TtC7teliver7Teliver")
 @interface Teliver : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull SDKVersion;)
++ (NSString * _Nonnull)SDKVersion SWIFT_WARN_UNUSED_RESULT;
+/// @abstract Initialize the Teliver SDK with the provided settings.
+/// @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).
+/// @param settings The settings to use. Refer @TeliverSettings for more information.
+- (nonnull instancetype)initWithTeliverSettings:(TeliverSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+/// @abstract Register Teliver Delegates for SDK Callbacks.
+/// @discussion Register Teliver Delegates for SDK Callbacks for a view controller.
+/// @param controller UIViewController where delegates have been registered.
++ (void)registerTeliverCallbacksForViewController:(UIViewController * _Nonnull)controller;
+/// @abstract Identify User for Teliver.
+/// @discussion Register the the user with teliver to be identified.
+/// @param username The username of a user to map the push notification token.
++ (void)identifyUserForUser:(NSString * _Nonnull)username;
+/// @abstract UnIdentify User for Teliver.
+/// @discussion Unidentify the registered user from Teliver.
+/// @param username The username of a user to map with teliver.
++ (void)unIdentifyUserForUser:(NSString * _Nonnull)username;
+/// @abstract Indentify Push is from Teliver.
+/// @discussion Check the Push received is from Teliver.
+/// @param data The data received from APNS Server.
++ (BOOL)isTeliverPushWithData:(NSDictionary * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
+/// @abstract Identify User for Teliver Push Notification with the username.
+/// @discussion Register the push notification token to recieve Push Notification from Teliver Server.
+/// @param username The username of a user to map the push notification token.
+/// @param token    The push notification token.
++ (void)identifyUserForUser:(NSString * _Nonnull)username withToken:(NSString * _Nonnull)token;
+/// @abstract Start tracking the operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. Use can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A Single Teliver Tracker object of a user to be tracked. Refer @TeliverTracker for more information.
+/// @param message  Message to be shown on Navigation Bar.
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user withNavigationTitle:(NSString * _Nonnull)message;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. Use can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param message  Message to be shown on Navigation Bar.
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users withNavigationTitle:(NSString * _Nonnull)message;
+/// @abstract Start tracking the operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip with their own MapView. You can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A Single Teliver Tracker object of a user to be tracked. Refer @TeliverTracker for more information.
+/// @param mapview  MapView to be shown in their view controller
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user withMapView:(MKMapView * _Nonnull)mapView withCurrentViewController:(UIViewController * _Nonnull)currentViewController;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. Use can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param mapview  MapView to be shown in their view controller.
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users withMapView:(MKMapView * _Nonnull)mapView withCurrentViewController:(UIViewController * _Nonnull)currentViewController;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
+/// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param viewController  The viewController to which the delegates to be called.
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users onViewController:(UIViewController * _Nonnull)viewController;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
+/// @param user     A Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param viewController  The viewController to which the delegates to be called.
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user onViewController:(UIViewController * _Nonnull)viewController;
+/// @abstract Start tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. This method can be used to start track another operator while tracking another user.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param user     A Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
++ (void)startBackgroundTrackingForUser:(TeliverTracker * _Nonnull)user;
+/// @abstract Start tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track multiple operator with help of tracking id provided the operator at start of his trip. This method can be used to start track another operator while tracking another user.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param users     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
++ (void)startBackgroundTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users;
+/// @abstract Stop tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to stop multiple tracking the operator with help of tracking id provided the operator at start of his trip.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param trackingIds     A array of tracking ids.
++ (void)stopBackgroundTrackingForTrackingIds:(NSArray<NSString *> * _Nonnull)trackingIds;
+/// @abstract Stop tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to stop tracking the operator with help of tracking id provided the operator at start of his trip.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param trackingId     A tracking id  of a operator.
++ (void)stopBackgroundTrackingForTrackingId:(NSString * _Nonnull)trackingId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -216,15 +297,51 @@ SWIFT_PROTOCOL("_TtP7teliver15TeliverDelegate_")
 /// Teliver Settings: This class has the whole settings, for the SDK to Operate.
 SWIFT_CLASS("_TtC7teliver15TeliverSettings")
 @interface TeliverSettings : NSObject
+/// <ul>
+///   <li>
+///     Teliver App Id for the SDK.
+///   </li>
+/// </ul>
+@property (nonatomic, copy) NSString * _Nullable appKey;
+/// APNS Push Token for the SDK.
+@property (nonatomic, copy) NSString * _Nonnull pushToken;
+/// Teliver Logs.
+@property (nonatomic) BOOL debugging;
+/// @abstract Teliver Settings Initializer.
+/// @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).This object is passed as a parameter for Teliver SDK init.
+/// @param appKey Teliver App Key.
+- (nonnull instancetype)initWithAppKey:(NSString * _Nonnull)appKey OBJC_DESIGNATED_INITIALIZER;
 /// @abstract Teliver Settings Initializer.
 /// @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).This object is passed as a parameter for Teliver SDK init.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImage;
 
 /// Teliver Tracker: This class has the objects of the Operator tracker point.
 SWIFT_CLASS("_TtC7teliver14TeliverTracker")
 @interface TeliverTracker : NSObject
+/// Tracking id of Operator.
+@property (nonatomic, copy) NSString * _Nullable trackingId;
+/// Message for the marker snippet.
+@property (nonatomic, copy) NSString * _Nullable message;
+/// Custom Marker Image.
+@property (nonatomic, strong) UIImage * _Nullable marker;
+/// @abstract Teliver Tracking Initializer.
+/// @discussion This method initializes the Operator user object.
+/// @param trackingId   Tracking id of the Operator.
+/// @param message      Custom message for the Operator.
+/// @param marker       Custom Marker image for the Operator.
+- (nonnull instancetype)initForTrackingId:(NSString * _Nonnull)trackingId withCustomMessage:(NSString * _Nonnull)message andWithCustomMarker:(UIImage * _Nonnull)marker OBJC_DESIGNATED_INITIALIZER;
+/// @abstract Teliver Tracking Initializer.
+/// @discussion This method initializes the Operator user object.
+/// @param trackingId   Tracking id of the Operator.
+/// @param message      Custom message for the Operator.
+- (nonnull instancetype)initForTrackingId:(NSString * _Nonnull)trackingId withCustomMessage:(NSString * _Nonnull)message OBJC_DESIGNATED_INITIALIZER;
+/// @abstract Teliver Tracking Initializer.
+/// @discussion This method initializes the Operator user object.
+/// @param trackingId   Tracking id of the Operator.
+- (nonnull instancetype)initForTrackingId:(NSString * _Nonnull)trackingId OBJC_DESIGNATED_INITIALIZER;
 /// @abstract Teliver Tracker Initializer.
 /// @discussion This method initializes the Operator user object.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -450,10 +567,91 @@ SWIFT_CLASS("_TtC7teliver21CustomPointAnnotation")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class TeliverSettings;
+@class UIViewController;
+@class TeliverTracker;
+@class MKMapView;
 
 /// Teliver: This class is the interface for the SDK exposed methods.
 SWIFT_CLASS("_TtC7teliver7Teliver")
 @interface Teliver : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull SDKVersion;)
++ (NSString * _Nonnull)SDKVersion SWIFT_WARN_UNUSED_RESULT;
+/// @abstract Initialize the Teliver SDK with the provided settings.
+/// @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).
+/// @param settings The settings to use. Refer @TeliverSettings for more information.
+- (nonnull instancetype)initWithTeliverSettings:(TeliverSettings * _Nonnull)settings OBJC_DESIGNATED_INITIALIZER;
+/// @abstract Register Teliver Delegates for SDK Callbacks.
+/// @discussion Register Teliver Delegates for SDK Callbacks for a view controller.
+/// @param controller UIViewController where delegates have been registered.
++ (void)registerTeliverCallbacksForViewController:(UIViewController * _Nonnull)controller;
+/// @abstract Identify User for Teliver.
+/// @discussion Register the the user with teliver to be identified.
+/// @param username The username of a user to map the push notification token.
++ (void)identifyUserForUser:(NSString * _Nonnull)username;
+/// @abstract UnIdentify User for Teliver.
+/// @discussion Unidentify the registered user from Teliver.
+/// @param username The username of a user to map with teliver.
++ (void)unIdentifyUserForUser:(NSString * _Nonnull)username;
+/// @abstract Indentify Push is from Teliver.
+/// @discussion Check the Push received is from Teliver.
+/// @param data The data received from APNS Server.
++ (BOOL)isTeliverPushWithData:(NSDictionary * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
+/// @abstract Identify User for Teliver Push Notification with the username.
+/// @discussion Register the push notification token to recieve Push Notification from Teliver Server.
+/// @param username The username of a user to map the push notification token.
+/// @param token    The push notification token.
++ (void)identifyUserForUser:(NSString * _Nonnull)username withToken:(NSString * _Nonnull)token;
+/// @abstract Start tracking the operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. Use can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A Single Teliver Tracker object of a user to be tracked. Refer @TeliverTracker for more information.
+/// @param message  Message to be shown on Navigation Bar.
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user withNavigationTitle:(NSString * _Nonnull)message;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. Use can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param message  Message to be shown on Navigation Bar.
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users withNavigationTitle:(NSString * _Nonnull)message;
+/// @abstract Start tracking the operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip with their own MapView. You can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A Single Teliver Tracker object of a user to be tracked. Refer @TeliverTracker for more information.
+/// @param mapview  MapView to be shown in their view controller
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user withMapView:(MKMapView * _Nonnull)mapView withCurrentViewController:(UIViewController * _Nonnull)currentViewController;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. Use can use Teliver Push Service from Operator SDK to recieve tracking id through Push Notification.
+/// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param mapview  MapView to be shown in their view controller.
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users withMapView:(MKMapView * _Nonnull)mapView withCurrentViewController:(UIViewController * _Nonnull)currentViewController;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
+/// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param viewController  The viewController to which the delegates to be called.
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users onViewController:(UIViewController * _Nonnull)viewController;
+/// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
+/// @param user     A Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
+/// @param viewController  The viewController to which the delegates to be called.
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user onViewController:(UIViewController * _Nonnull)viewController;
+/// @abstract Start tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. This method can be used to start track another operator while tracking another user.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param user     A Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
++ (void)startBackgroundTrackingForUser:(TeliverTracker * _Nonnull)user;
+/// @abstract Start tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to track multiple operator with help of tracking id provided the operator at start of his trip. This method can be used to start track another operator while tracking another user.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param users     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
++ (void)startBackgroundTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users;
+/// @abstract Stop tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to stop multiple tracking the operator with help of tracking id provided the operator at start of his trip.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param trackingIds     A array of tracking ids.
++ (void)stopBackgroundTrackingForTrackingIds:(NSArray<NSString *> * _Nonnull)trackingIds;
+/// @abstract Stop tracking operator using the tracking Id provided by the operator.
+/// @discussion This method helps to stop tracking the operator with help of tracking id provided the operator at start of his trip.
+/// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
+/// @param trackingId     A tracking id  of a operator.
++ (void)stopBackgroundTrackingForTrackingId:(NSString * _Nonnull)trackingId;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -471,15 +669,51 @@ SWIFT_PROTOCOL("_TtP7teliver15TeliverDelegate_")
 /// Teliver Settings: This class has the whole settings, for the SDK to Operate.
 SWIFT_CLASS("_TtC7teliver15TeliverSettings")
 @interface TeliverSettings : NSObject
+/// <ul>
+///   <li>
+///     Teliver App Id for the SDK.
+///   </li>
+/// </ul>
+@property (nonatomic, copy) NSString * _Nullable appKey;
+/// APNS Push Token for the SDK.
+@property (nonatomic, copy) NSString * _Nonnull pushToken;
+/// Teliver Logs.
+@property (nonatomic) BOOL debugging;
+/// @abstract Teliver Settings Initializer.
+/// @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).This object is passed as a parameter for Teliver SDK init.
+/// @param appKey Teliver App Key.
+- (nonnull instancetype)initWithAppKey:(NSString * _Nonnull)appKey OBJC_DESIGNATED_INITIALIZER;
 /// @abstract Teliver Settings Initializer.
 /// @discussion This may only be called once (preferably, in application:didFinishLaunchingWithOptions:).This object is passed as a parameter for Teliver SDK init.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImage;
 
 /// Teliver Tracker: This class has the objects of the Operator tracker point.
 SWIFT_CLASS("_TtC7teliver14TeliverTracker")
 @interface TeliverTracker : NSObject
+/// Tracking id of Operator.
+@property (nonatomic, copy) NSString * _Nullable trackingId;
+/// Message for the marker snippet.
+@property (nonatomic, copy) NSString * _Nullable message;
+/// Custom Marker Image.
+@property (nonatomic, strong) UIImage * _Nullable marker;
+/// @abstract Teliver Tracking Initializer.
+/// @discussion This method initializes the Operator user object.
+/// @param trackingId   Tracking id of the Operator.
+/// @param message      Custom message for the Operator.
+/// @param marker       Custom Marker image for the Operator.
+- (nonnull instancetype)initForTrackingId:(NSString * _Nonnull)trackingId withCustomMessage:(NSString * _Nonnull)message andWithCustomMarker:(UIImage * _Nonnull)marker OBJC_DESIGNATED_INITIALIZER;
+/// @abstract Teliver Tracking Initializer.
+/// @discussion This method initializes the Operator user object.
+/// @param trackingId   Tracking id of the Operator.
+/// @param message      Custom message for the Operator.
+- (nonnull instancetype)initForTrackingId:(NSString * _Nonnull)trackingId withCustomMessage:(NSString * _Nonnull)message OBJC_DESIGNATED_INITIALIZER;
+/// @abstract Teliver Tracking Initializer.
+/// @discussion This method initializes the Operator user object.
+/// @param trackingId   Tracking id of the Operator.
+- (nonnull instancetype)initForTrackingId:(NSString * _Nonnull)trackingId OBJC_DESIGNATED_INITIALIZER;
 /// @abstract Teliver Tracker Initializer.
 /// @discussion This method initializes the Operator user object.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

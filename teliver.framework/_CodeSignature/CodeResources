@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/teliver-Swift.h</key>
 		<data>
-		BHk24BGolyQgqc3EAk2HLxm591A=
+		qYy1BICJ8d3PyT+rFp3eL+8L78c=
 		</data>
 		<key>Headers/teliver.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qXA2j1n0BKZNBNq9Il0qq8qQfVw=
+		bGT5G1J0sz9gDxV/lz0COZn8uGc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -26,27 +26,27 @@
 		</data>
 		<key>Modules/teliver.swiftmodule/arm.swiftdoc</key>
 		<data>
-		H39ukP3IyR0kMPOoWrjIBGf0oJQ=
+		K+Z8Tg+f2VuH9CliciF/dImpFxE=
 		</data>
 		<key>Modules/teliver.swiftmodule/arm.swiftmodule</key>
 		<data>
-		ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
+		Tel8CQiyntIIPf5IXO3RXAeo35U=
 		</data>
 		<key>Modules/teliver.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		OQCsj/8t4z28sWmId/GEzqOTSh8=
+		6ix69idQRVnsIw1mmGhp3ddOo2I=
 		</data>
 		<key>Modules/teliver.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		hs5C2bddDB1mg9XwtfWqAC2beJ8=
+		T0NjMUdTgfNl3oHaeGL1DL891WI=
 		</data>
 		<key>Modules/teliver.swiftmodule/armv7.swiftdoc</key>
 		<data>
-		H39ukP3IyR0kMPOoWrjIBGf0oJQ=
+		K+Z8Tg+f2VuH9CliciF/dImpFxE=
 		</data>
 		<key>Modules/teliver.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
+		Tel8CQiyntIIPf5IXO3RXAeo35U=
 		</data>
 		<key>cancel@3x.png</key>
 		<data>
@@ -102,11 +102,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BHk24BGolyQgqc3EAk2HLxm591A=
+			qYy1BICJ8d3PyT+rFp3eL+8L78c=
 			</data>
 			<key>hash2</key>
 			<data>
-			lWox6Z0gyqJy0forCOmtzJl4jYfVgGT7z5PDf8GdzDk=
+			DpqCA41ms3x3okIScKnH9X2YMenoq9myxPypkGjUr0E=
 			</data>
 		</dict>
 		<key>Headers/teliver.h</key>
@@ -135,66 +135,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			H39ukP3IyR0kMPOoWrjIBGf0oJQ=
+			K+Z8Tg+f2VuH9CliciF/dImpFxE=
 			</data>
 			<key>hash2</key>
 			<data>
-			v641pyk3IoGO9Bxp2ECXUIBAVxlkHNpdzdutEq+RS+c=
+			4WMjI94Mw8ds0PBP6FwGg8hmPRxZ5DKbm+uHUKibj9w=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
+			Tel8CQiyntIIPf5IXO3RXAeo35U=
 			</data>
 			<key>hash2</key>
 			<data>
-			YZrW+cgkNhtFzYGhMAxPheRT6VUIrh+uDuoUCHk0FnA=
+			jSevAqZ8bcpVI9nqE72w/OVvPjFnhhbTqXW5oq8CQ4c=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OQCsj/8t4z28sWmId/GEzqOTSh8=
+			6ix69idQRVnsIw1mmGhp3ddOo2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			N4wKpnx1oKnDxVZ9EenwqEPEIuMQ/bUY2B2XvktPyt8=
+			zTMD07ZPhKrhdwfnWXC4OeOtqdQMvjQkS81yDcjZTaM=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hs5C2bddDB1mg9XwtfWqAC2beJ8=
+			T0NjMUdTgfNl3oHaeGL1DL891WI=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zi6X21XUAQfl0/yEkchjnGl72Zju1L25GMjll7fn4dQ=
+			F8hcJn9IL+rAU0NMoFS1GHrr1kRgis5jQ4zCykWVHPc=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/armv7.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H39ukP3IyR0kMPOoWrjIBGf0oJQ=
+			K+Z8Tg+f2VuH9CliciF/dImpFxE=
 			</data>
 			<key>hash2</key>
 			<data>
-			v641pyk3IoGO9Bxp2ECXUIBAVxlkHNpdzdutEq+RS+c=
+			4WMjI94Mw8ds0PBP6FwGg8hmPRxZ5DKbm+uHUKibj9w=
 			</data>
 		</dict>
 		<key>Modules/teliver.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ubfQhE2VLnIq6GWS+2XNPHn8Tx0=
+			Tel8CQiyntIIPf5IXO3RXAeo35U=
 			</data>
 			<key>hash2</key>
 			<data>
-			YZrW+cgkNhtFzYGhMAxPheRT6VUIrh+uDuoUCHk0FnA=
+			jSevAqZ8bcpVI9nqE72w/OVvPjFnhhbTqXW5oq8CQ4c=
 			</data>
 		</dict>
 		<key>cancel@3x.png</key>
