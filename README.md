@@ -1,6 +1,6 @@
 # [Teliver](https://teliver.io)
 
-[![Pod Version](https://img.shields.io/badge/cocoapod-v1.1.5-blue.svg)](http://cocoadocs.org/docsets/teliver/) [![XCode Version](https://img.shields.io/badge/xcode-10.2-orange.svg)]() [![Swift Version](https://img.shields.io/badge/swift-v5.0-green.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/dt/teliver.svg?style=plastic)]() [![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](http://cocoadocs.org/docsets/teliver/) [![License](https://img.shields.io/badge/License-commercial-orange.svg)](https://teliver.io/terms/)
+[![Pod Version](https://img.shields.io/badge/cocoapod-v1.1.7-blue.svg)](http://cocoadocs.org/docsets/teliver/) [![XCode Version](https://img.shields.io/badge/xcode-10.2-orange.svg)]() [![Swift Version](https://img.shields.io/badge/swift-v5.0-green.svg)]() [![CocoaPods](https://img.shields.io/cocoapods/dt/teliver.svg?style=plastic)]() [![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](http://cocoadocs.org/docsets/teliver/) [![License](https://img.shields.io/badge/License-commercial-orange.svg)](https://teliver.io/terms/)
 
 Teliver is your one place stop for all GPS Based Location tracking solutions. With simplified integrations for iOS and Android, Teliver synchronizes with applications that require location tracking. Advanced options with the inclusion of Custom markers, Multiple Operator Tracking and Push notifications to enhance user satisfaction and business productivity are accomplished.
 
