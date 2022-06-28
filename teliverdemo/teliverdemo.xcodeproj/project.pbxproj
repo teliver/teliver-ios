@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		219E64E820049FF1005F556E /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219E64E720049FF0005F556E /* teliver.framework */; };
-		219E64E920049FF1005F556E /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 219E64E720049FF0005F556E /* teliver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C5F84CABB328DD54039184 /* Pods_teliverdemo.framework */; };
+		AF05C1122864B247006A54DA /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF05C1102864B23F006A54DA /* teliver.framework */; platformFilter = ios; };
+		AF05C1132864B247006A54DA /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF05C1102864B23F006A54DA /* teliver.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF61EFC81FE277B7007D43EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC71FE277B7007D43EF /* AppDelegate.swift */; };
 		AF61EFCA1FE277B7007D43EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC91FE277B7007D43EF /* ViewController.swift */; };
 		AF61EFCF1FE277B7007D43EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF61EFCE1FE277B7007D43EF /* Assets.xcassets */; };
@@ -28,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				219E64E920049FF1005F556E /* teliver.framework in Embed Frameworks */,
+				AF05C1132864B247006A54DA /* teliver.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,9 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		219E64E720049FF0005F556E /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = teliver.framework; path = ../teliver.framework; sourceTree = "<group>"; };
 		38554EDBF742BE448C12E2BA /* Pods-teliverdemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.release.xcconfig"; sourceTree = "<group>"; };
 		AAD1E57A2CF74CA04259FD97 /* Pods-teliverdemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF05C1102864B23F006A54DA /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = teliver.framework; path = "../../teliver.xcframework/ios-arm64_x86_64-simulator/teliver.framework"; sourceTree = "<group>"; };
 		AF61EFC41FE277B7007D43EF /* teliverdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teliverdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF61EFC71FE277B7007D43EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF61EFC91FE277B7007D43EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				219E64E820049FF1005F556E /* teliver.framework in Frameworks */,
+				AF05C1122864B247006A54DA /* teliver.framework in Frameworks */,
 				ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,6 @@
 		AF61EFBB1FE277B7007D43EF = {
 			isa = PBXGroup;
 			children = (
-				219E64E720049FF0005F556E /* teliver.framework */,
 				AF61EFC61FE277B7007D43EF /* teliverdemo */,
 				AF61EFC51FE277B7007D43EF /* Products */,
 				2A87B11F45551BD2DBF9ADD1 /* Pods */,
@@ -97,6 +96,7 @@
 		AF61EFC61FE277B7007D43EF /* teliverdemo */ = {
 			isa = PBXGroup;
 			children = (
+				AF05C1102864B23F006A54DA /* teliver.framework */,
 				AF61EFE91FE28BC2007D43EF /* Main.storyboard */,
 				AF61EFC71FE277B7007D43EF /* AppDelegate.swift */,
 				AF61EFC91FE277B7007D43EF /* ViewController.swift */,
@@ -155,7 +155,6 @@
 				TargetAttributes = {
 					AF61EFC31FE277B7007D43EF = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -379,7 +378,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -389,18 +389,23 @@
 			baseConfigurationReference = AAD1E57A2CF74CA04259FD97 /* Pods-teliverdemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MY6B33W8UL;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = teliverdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemo;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -410,18 +415,23 @@
 			baseConfigurationReference = 38554EDBF742BE448C12E2BA /* Pods-teliverdemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MY6B33W8UL;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = teliverdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemo;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -1,0 +1,111 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name teliver
+import CoreLocation
+import Foundation
+import MapKit
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+@_exported import teliver
+@objc @_inheritsConvenienceInitializers @objcMembers open class TeliverSettings : ObjectiveC.NSObject {
+  @objc open var appKey: Swift.String?
+  @objc open var pushToken: Swift.String
+  @objc open var debugging: Swift.Bool
+  @objc @discardableResult
+  public init(withAppKey appKey: Swift.String)
+  @discardableResult
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol TeliverTrackingDelegate {
+  @objc func didStartedTracking(_ trackingId: Swift.String?, location: [Swift.String : Any])
+  @objc func didStoppedTracking(_ trackingId: Swift.String?)
+  @objc func didRecieveUpdateOnTracking(_ trackingId: Swift.String?, data: [Swift.String : Any])
+  @objc func didRecieveErrorOnTracking(_ error: Swift.String?)
+}
+@objc public protocol TeliverDelegate {
+  @objc func didInitializedSDK(_ initialized: Swift.Bool, message: Swift.String?)
+  @objc func didUserRegistered(_ registered: Swift.Bool, message: Swift.String?)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers open class TeliverTracker : ObjectiveC.NSObject {
+  @objc open var trackingId: Swift.String?
+  @objc open var message: Swift.String?
+  @objc open var marker: UIKit.UIImage?
+  @objc public init(forTrackingId trackingId: Swift.String, withCustomMessage message: Swift.String, andWithCustomMarker marker: UIKit.UIImage)
+  @objc public init(forTrackingId trackingId: Swift.String, withCustomMessage message: Swift.String = "")
+  @objc public init(forTrackingId trackingId: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension Foundation.Timer {
+  public class func new(after interval: Foundation.TimeInterval, _ block: @escaping () -> Swift.Void) -> Foundation.Timer
+  public class func new(every interval: Foundation.TimeInterval, _ block: @escaping () -> Swift.Void) -> Foundation.Timer
+  @nonobjc public class func new(every interval: Foundation.TimeInterval, _ block: @escaping (Foundation.Timer) -> Swift.Void) -> Foundation.Timer
+  public func start(runLoop: Foundation.RunLoop = .current, modes: Foundation.RunLoop.Mode...)
+}
+extension Swift.Double {
+  public var millisecond: Foundation.TimeInterval {
+    get
+  }
+  public var milliseconds: Foundation.TimeInterval {
+    get
+  }
+  public var ms: Foundation.TimeInterval {
+    get
+  }
+  public var second: Foundation.TimeInterval {
+    get
+  }
+  public var seconds: Foundation.TimeInterval {
+    get
+  }
+  public var minute: Foundation.TimeInterval {
+    get
+  }
+  public var minutes: Foundation.TimeInterval {
+    get
+  }
+  public var hour: Foundation.TimeInterval {
+    get
+  }
+  public var hours: Foundation.TimeInterval {
+    get
+  }
+  public var day: Foundation.TimeInterval {
+    get
+  }
+  public var days: Foundation.TimeInterval {
+    get
+  }
+}
+@objc @objcMembers open class Teliver : ObjectiveC.NSObject {
+  @objc public static var SDKVersion: Swift.String {
+    @objc get
+  }
+  @objc @discardableResult
+  public init(withTeliverSettings settings: teliver.TeliverSettings)
+  @objc open class func registerTeliverCallbacks(forViewController controller: UIKit.UIViewController)
+  @objc open class func identifyUser(forUser username: Swift.String)
+  @objc open class func unIdentifyUser(forUser username: Swift.String)
+  @objc open class func isTeliverPush(data: [Swift.AnyHashable : Any]) -> Swift.Bool
+  @objc open class func identifyUser(forUser username: Swift.String, withToken token: Swift.String)
+  @objc open class func startTrackingFor(user: teliver.TeliverTracker, withNavigationTitle message: Swift.String)
+  @objc open class func startTrackingFor(users: [teliver.TeliverTracker], withNavigationTitle message: Swift.String)
+  @objc open class func startTrackingFor(user: teliver.TeliverTracker, withMapView mapView: MapKit.MKMapView, withCurrentViewController currentViewController: UIKit.UIViewController)
+  @objc open class func startTrackingFor(users: [teliver.TeliverTracker], withMapView mapView: MapKit.MKMapView, withCurrentViewController currentViewController: UIKit.UIViewController)
+  @objc open class func startTrackingFor(users: [teliver.TeliverTracker], onViewController viewController: UIKit.UIViewController)
+  @objc open class func startTrackingFor(user: teliver.TeliverTracker, onViewController viewController: UIKit.UIViewController)
+  @objc open class func startBackgroundTrackingFor(user: teliver.TeliverTracker)
+  @objc open class func startBackgroundTrackingFor(users: [teliver.TeliverTracker])
+  @objc open class func stopBackgroundTrackingFor(trackingIds: [Swift.String])
+  @objc open class func stopBackgroundTrackingFor(trackingId: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers open class CustomPointAnnotation : MapKit.MKPointAnnotation {
+  @objc public var marker: UIKit.UIImage!
+  @objc public var trackingId: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
