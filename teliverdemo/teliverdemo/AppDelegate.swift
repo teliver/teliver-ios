@@ -15,16 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //window?.tintColor = UIColor.red
         // Override point for customization after application launch.
         
         //Pod for View automoatic scroll on keyboard open.
-        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.shared.enable = true
         
         //Configure Teliver SDK
-        let settings = TeliverSettings.init(withAppKey: "TELIVER_KEY")
+        let settings = TeliverSettings.init(withAppKey: "2463ba309dad474432232f34c3ed6d3c")
         settings.debugging = true //Enable Debugging.
         Teliver.init(withTeliverSettings: settings) //Initialize SDK.
         return true

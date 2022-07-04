@@ -27,7 +27,8 @@ class TELConsumerViewController: UIViewController {
             {
                 (alert: UIAlertAction!) -> Void in
                 
-                let tracking = TeliverTrackerBuilder.init(forTrackingId: self.trackingText.text!)
+                //let tracking = TeliverTrackerBuilder.init(forTrackingId: self.trackingText.text!)
+                let tracking = TeliverTracker.init(forTrackingId: self.trackingText.text!)
             Teliver.startTrackingFor(user: tracking, withNavigationTitle: "Default title")
                 
             })
@@ -37,7 +38,8 @@ class TELConsumerViewController: UIViewController {
             let message_map = UIAlertAction(title: "Show Custom Message", style: .default, handler:
             {
                 (alert: UIAlertAction!) -> Void in
-                let tracking = TeliverTrackerBuilder.init(forTrackingId: self.trackingText.text!, withCustomMessage: "My Test Tracking")
+                //let tracking = TeliverTrackerBuilder.init(forTrackingId: self.trackingText.text!, withCustomMessage: "My Test Tracking")
+                let tracking = TeliverTracker.init(forTrackingId: self.trackingText.text!, withCustomMessage: "My Test Tracking")
                 Teliver.startTrackingFor(user: tracking, withNavigationTitle: "Custom text title")
             })
             
@@ -45,7 +47,8 @@ class TELConsumerViewController: UIViewController {
             let marker = UIAlertAction(title: "Show Custom Marker", style: .default, handler:
             {
                 (alert: UIAlertAction!) -> Void in
-                let tracking = TeliverTrackerBuilder.init(forTrackingId: self.trackingText.text!, withCustomMessage: "With Custom Image", andWithCustomMarker: UIImage.init(named: "pin")!)
+                //let tracking = TeliverTrackerBuilder.init(forTrackingId: self.trackingText.text!, withCustomMessage: "With Custom Image", andWithCustomMarker: UIImage.init(named: "pin")!)
+                let tracking = TeliverTracker.init(forTrackingId: self.trackingText.text!, withCustomMessage: "With Custom Image", andWithCustomMarker: UIImage.init(named: "pin")!)
                 Teliver.startTrackingFor(user: tracking, withNavigationTitle: "Custom Marker title")
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler:
@@ -72,10 +75,10 @@ class TELConsumerViewController: UIViewController {
     
     func throwValidationError(error:String){
         // create the alert
-        let alert = UIAlertController(title: "Validation Error", message: error, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Validation Error", message: error, preferredStyle: .alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)

@@ -17,7 +17,8 @@ class ViewController: UIViewController,TeliverDelegate {
 
     func didInitializedSDK(_ initialized: Bool, message: String?) {
         if initialized{
-            Teliver.identifyUser(forUser: "Quady!!!", ofType: .both) //Register
+           // Teliver.identifyUser(forUser: "Quady!!!", withToken: .both)
+            Teliver.identifyUser(forUser: "")//Register
         }else{
             print(message)
         }
@@ -32,14 +33,15 @@ class ViewController: UIViewController,TeliverDelegate {
         self.present(navController, animated: true, completion: nil)
     }
     @IBAction func OperatorButton(_ sender: Any) {
-        let vc = TELDriverViewController() //change this to your class name
-        let navController = UINavigationController.init(rootViewController: vc)
-        self.present(navController, animated: true, completion: nil)
+//        let vc = TELDriverViewController() //change this to your class name
+//        let navController = UINavigationController.init(rootViewController: vc)
+//        self.present(navController, animated: true, completion: nil)
        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        Teliver.registerTeliverDelegate(onViewController: self)
+        //Teliver.registerTeliverDelegate(onViewController: self)
+        Teliver.registerTeliverCallbacks(forViewController: self)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

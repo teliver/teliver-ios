@@ -221,10 +221,12 @@ SWIFT_CLASS("_TtC7teliver21CustomPointAnnotation")
 @end
 
 @class TeliverSettings;
-@class UIViewController;
+@protocol TeliverDelegate;
 @class NSNumber;
 @class TeliverTracker;
 @class MKMapView;
+@class UIViewController;
+@protocol TeliverTrackingDelegate;
 
 /// Teliver: This class is the interface for the SDK exposed methods.
 SWIFT_CLASS("_TtC7teliver7Teliver")
@@ -238,7 +240,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @abstract Register Teliver Delegates for SDK Callbacks.
 /// @discussion Register Teliver Delegates for SDK Callbacks for a view controller.
 /// @param controller UIViewController where delegates have been registered.
-+ (void)registerTeliverCallbacksForViewController:(UIViewController * _Nonnull)controller;
++ (void)registerTeliverCallbacksForViewControllerDelegate:(id <TeliverDelegate> _Nullable)controllerDelegate;
 /// @abstract Identify User for Teliver.
 /// @discussion Register the the user with teliver to be identified.
 /// @param username The username of a user to map the push notification token.
@@ -280,12 +282,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
 /// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
 /// @param viewController  The viewController to which the delegates to be called.
-+ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users onViewController:(UIViewController * _Nonnull)viewController;
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users onViewControllerDelegate:(id <TeliverTrackingDelegate> _Nonnull)delegate;
 /// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
 /// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
 /// @param user     A Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
 /// @param viewController  The viewController to which the delegates to be called.
-+ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user onViewController:(UIViewController * _Nonnull)viewController;
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user onViewControllerDelegate:(id <TeliverTrackingDelegate> _Nonnull)delegate;
 /// @abstract Start tracking operator using the tracking Id provided by the operator.
 /// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. This method can be used to start track another operator while tracking another user.
 /// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)
@@ -613,10 +615,12 @@ SWIFT_CLASS("_TtC7teliver21CustomPointAnnotation")
 @end
 
 @class TeliverSettings;
-@class UIViewController;
+@protocol TeliverDelegate;
 @class NSNumber;
 @class TeliverTracker;
 @class MKMapView;
+@class UIViewController;
+@protocol TeliverTrackingDelegate;
 
 /// Teliver: This class is the interface for the SDK exposed methods.
 SWIFT_CLASS("_TtC7teliver7Teliver")
@@ -630,7 +634,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @abstract Register Teliver Delegates for SDK Callbacks.
 /// @discussion Register Teliver Delegates for SDK Callbacks for a view controller.
 /// @param controller UIViewController where delegates have been registered.
-+ (void)registerTeliverCallbacksForViewController:(UIViewController * _Nonnull)controller;
++ (void)registerTeliverCallbacksForViewControllerDelegate:(id <TeliverDelegate> _Nullable)controllerDelegate;
 /// @abstract Identify User for Teliver.
 /// @discussion Register the the user with teliver to be identified.
 /// @param username The username of a user to map the push notification token.
@@ -672,12 +676,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
 /// @param user     A array of Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
 /// @param viewController  The viewController to which the delegates to be called.
-+ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users onViewController:(UIViewController * _Nonnull)viewController;
++ (void)startTrackingForUsers:(NSArray<TeliverTracker *> * _Nonnull)users onViewControllerDelegate:(id <TeliverTrackingDelegate> _Nonnull)delegate;
 /// @abstract Start tracking multiple operator using the tracking Id provided by the operator.
 /// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. You can create your own view controller, The delegates will be called on your view controller. Refer @TeliverTrackingDelegate for more information.
 /// @param user     A Teliver Tracker object of a users to be tracked. Refer @TeliverTracker for more information.
 /// @param viewController  The viewController to which the delegates to be called.
-+ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user onViewController:(UIViewController * _Nonnull)viewController;
++ (void)startTrackingForUser:(TeliverTracker * _Nonnull)user onViewControllerDelegate:(id <TeliverTrackingDelegate> _Nonnull)delegate;
 /// @abstract Start tracking operator using the tracking Id provided by the operator.
 /// @discussion This method helps to track the operator with help of tracking id provided the operator at start of his trip. This method can be used to start track another operator while tracking another user.
 /// This method is only applicable for Tracking on Your view controller. refer @startTrackingFor(user:TeliverTracker,onViewController :viewController:UIViewController)

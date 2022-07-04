@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C5F84CABB328DD54039184 /* Pods_teliverdemo.framework */; };
-		AF05C1122864B247006A54DA /* teliver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF05C1102864B23F006A54DA /* teliver.framework */; platformFilter = ios; };
-		AF05C1132864B247006A54DA /* teliver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF05C1102864B23F006A54DA /* teliver.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF61EFC81FE277B7007D43EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC71FE277B7007D43EF /* AppDelegate.swift */; };
 		AF61EFCA1FE277B7007D43EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF61EFC91FE277B7007D43EF /* ViewController.swift */; };
 		AF61EFCF1FE277B7007D43EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF61EFCE1FE277B7007D43EF /* Assets.xcassets */; };
@@ -28,7 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AF05C1132864B247006A54DA /* teliver.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +35,6 @@
 /* Begin PBXFileReference section */
 		38554EDBF742BE448C12E2BA /* Pods-teliverdemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.release.xcconfig"; sourceTree = "<group>"; };
 		AAD1E57A2CF74CA04259FD97 /* Pods-teliverdemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teliverdemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo.debug.xcconfig"; sourceTree = "<group>"; };
-		AF05C1102864B23F006A54DA /* teliver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = teliver.framework; path = "../../teliver.xcframework/ios-arm64_x86_64-simulator/teliver.framework"; sourceTree = "<group>"; };
 		AF61EFC41FE277B7007D43EF /* teliverdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teliverdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF61EFC71FE277B7007D43EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF61EFC91FE277B7007D43EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF05C1122864B247006A54DA /* teliver.framework in Frameworks */,
 				ACEE63294EC57E05643F802D /* Pods_teliverdemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,7 +91,6 @@
 		AF61EFC61FE277B7007D43EF /* teliverdemo */ = {
 			isa = PBXGroup;
 			children = (
-				AF05C1102864B23F006A54DA /* teliver.framework */,
 				AF61EFE91FE28BC2007D43EF /* Main.storyboard */,
 				AF61EFC71FE277B7007D43EF /* AppDelegate.swift */,
 				AF61EFC91FE277B7007D43EF /* ViewController.swift */,
@@ -132,7 +126,6 @@
 				AF61EFC21FE277B7007D43EF /* Resources */,
 				AF61EFDC1FE278AB007D43EF /* Embed Frameworks */,
 				35FC497A09C41E755ED18EC5 /* [CP] Embed Pods Frameworks */,
-				F7AC2D2D00A6E82A8F6EBF16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +148,7 @@
 				TargetAttributes = {
 					AF61EFC31FE277B7007D43EF = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -203,16 +197,20 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${PODS_ROOT}/teliver/teliver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/teliver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3E7E247D86B99C7FED7A599 /* [CP] Check Pods Manifest.lock */ = {
@@ -230,22 +228,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F7AC2D2D00A6E82A8F6EBF16 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teliverdemo/Pods-teliverdemo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -378,8 +361,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -390,18 +372,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2YAP27KG9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = teliverdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -416,18 +395,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J2YAP27KG9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = teliverdemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teliver.teliverdemoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

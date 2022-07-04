@@ -86,7 +86,7 @@ extension Swift.Double {
   }
   @objc @discardableResult
   public init(withTeliverSettings settings: teliver.TeliverSettings)
-  @objc open class func registerTeliverCallbacks(forViewController controller: UIKit.UIViewController)
+  @objc open class func registerTeliverCallbacks(forViewControllerDelegate controllerDelegate: teliver.TeliverDelegate?)
   @objc open class func identifyUser(forUser username: Swift.String)
   @objc open class func unIdentifyUser(forUser username: Swift.String)
   @objc open class func isTeliverPush(data: [Swift.AnyHashable : Any]) -> Swift.Bool
@@ -95,8 +95,8 @@ extension Swift.Double {
   @objc open class func startTrackingFor(users: [teliver.TeliverTracker], withNavigationTitle message: Swift.String)
   @objc open class func startTrackingFor(user: teliver.TeliverTracker, withMapView mapView: MapKit.MKMapView, withCurrentViewController currentViewController: UIKit.UIViewController)
   @objc open class func startTrackingFor(users: [teliver.TeliverTracker], withMapView mapView: MapKit.MKMapView, withCurrentViewController currentViewController: UIKit.UIViewController)
-  @objc open class func startTrackingFor(users: [teliver.TeliverTracker], onViewController viewController: UIKit.UIViewController)
-  @objc open class func startTrackingFor(user: teliver.TeliverTracker, onViewController viewController: UIKit.UIViewController)
+  @objc open class func startTrackingFor(users: [teliver.TeliverTracker], onViewControllerDelegate delegate: teliver.TeliverTrackingDelegate)
+  @objc open class func startTrackingFor(user: teliver.TeliverTracker, onViewControllerDelegate delegate: teliver.TeliverTrackingDelegate)
   @objc open class func startBackgroundTrackingFor(user: teliver.TeliverTracker)
   @objc open class func startBackgroundTrackingFor(users: [teliver.TeliverTracker])
   @objc open class func stopBackgroundTrackingFor(trackingIds: [Swift.String])
